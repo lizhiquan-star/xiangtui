@@ -1,0 +1,138 @@
+@charset 'utf-8';
+*{margin:0;padding: 0;}
+body{font-family: '微软雅黑';}
+ul{list-style-type:none;}
+a{text-decoration: none;}
+i,em,address{font-style: normal;}
+/*头部菜单*/
+header{width: 1200px;margin:0 auto;height: 120px;margin:0 auto;}
+header > a{display: block;position: absolute;top: 30px;width: 222px;height: 108px;text-indent: -9999px;background: url(../images/logo.png) no-repeat;}
+header > ul{background: blue;margin-left: 302px;}
+header > ul li{width: 142px;height: 120px;font-size: 18px;float: left;margin-right: 17px;text-align: center;position: relative;}
+header > ul li a{padding-top: 74px;display: block;color: #000;height: 46px;}
+header > ul li a:before{content: '';position: absolute;width:0%;right:50%;height: 5px;background-color: #f73856;bottom: 0px;transition: all 0.6s ease;}
+header > ul li a:after{content: '';position: absolute;width:0%;left:50%;height: 5px;background-color: #f73856;bottom: 0px;transition: all 0.6s ease;}
+header > ul li:hover a:after{width:50%;}
+header > ul li:hover a:before{width:50%;}
+header > ul li a.active{background: url(../images/currentMenu.png) no-repeat;color: #fff;}
+header .contact{width: 230px;height: 80px;float: right;margin-top: 23px;}
+header .contact p{/*height: 27px;*/background: url(../images/icon-phone.png) no-repeat left center;font-size: 28px;text-indent: 35px;color:#333;}
+header .contact span{display:block;float:left;width: 110px;height: 37px;text-align: center;line-height: 37px;}
+header .contact span.business{background: #3d3d3d;}
+header .contact span.personal{background: #f84662;margin-left: 10px;}
+header .contact span a{color: #fff;font-size: 18px;display: block;}
+/*回到顶部&联系客服*/
+div.backTop,div.contactService{cursor:pointer;position: fixed;right: 50px;z-index: 100;display: none;}
+div.backTop{top: 380px;width: 60px;height: 60px;}
+div.contactService{width: 40px;height: 40px;background: #f14a65;top: 450px;padding: 10px;color: white;text-align: center;}
+/*中间图片区域*/
+#banner{padding-top: 75px;height: 607px;margin:0 auto;background: url(../images/bannerBg.jpg) no-repeat center top;}
+#banner p.title{text-align: center;background: url(../images/mobileInternet.png) no-repeat center top;height: 58px;text-indent: -9999px;position: relative;animation: getUp 2s ease;}
+#banner p.sub-title{text-align: center;background: url(../images/marketingMode.png) no-repeat center top;height:36px;text-indent: -9999px;margin-top: 33px;position: relative;animation: getUp 1.2s ease;}
+#banner .propagandaAD{padding-top: 55px;height: 140px;width: 720px;background: url(../images/roundBall.png) no-repeat center top;margin:15px auto 0;position: relative;animation:showeffect 2s ease;}
+#banner .propagandaAD span{width:239px;line-height: 191px;height: 29px;display: block;text-indent: -9999px;animation:getShow2 1.5s ease;}
+#banner .propagandaAD span:nth-child(1){float: left;background: url(../images/shareBrand.png) no-repeat;}
+#banner .propagandaAD span:nth-child(2){float: right;background: url(../images/sideCloudSales.png) no-repeat;}
+#banner .propagandaAD .lineRound{position: relative;height: 2px;margin-top:39px;}
+#banner .propagandaAD .lineRound:after,#banner .propagandaAD .lineRound:before{content:'';position: absolute;height: 2px;animation:getLRwidth 1.5s ease;width: 360px;top: 0;background: #fff;}
+#banner .propagandaAD .lineRound:after{left: 50%;}
+#banner .propagandaAD .lineRound:before{right: 50%;}
+#banner .propagandaAD .peopleRound{width: 8px;height: 8px;border-radius: 50%;background: #fff;position: absolute;top: 91px;}
+#banner .propagandaAD .lineLeftDot{left: -8px;animation:getShow 1.5s ease;}
+#banner .propagandaAD .lineRightDot{right: -8px;animation:getShow 1.5s ease;}
+/*最左边人物动画*/
+#banner .propagandaAD .people1Dot{left: -13px;top: 288px;animation:getShow3 0.5s ease;}
+#banner .propagandaAD .peopleLine{position: absolute;}
+#banner .propagandaAD .people1Line1{left: -213px;top: 291px;width: 200px;height: 2px;}
+#banner .propagandaAD .people1Line1:after{content: '';animation: getLeftWidth 0.5s linear;background: #fff;width: 200px;height: 2px;position: absolute;right: 0;}
+#banner .propagandaAD .people1Line2{left: -213px;top: 256px;width: 2px;height: 35px;}
+#banner .propagandaAD .people1Line2:after{content:'';animation: getTopHeight 1s linear;background: #fff;width: 2px;height: 35px;position: absolute;bottom: 0;}
+#banner .propagandaAD .peopleList1{background: url(../images/people1.png);width: 62px;height: 62px;position: absolute;left: -243px;top: 194px;animation: getShow3 1s linear 1s both;}
+#banner .propagandaAD .xstdkszj{width: 270px;height: 30px;background: url(../images/xstdkszj.png) no-repeat;position: absolute;left: -172px;top:212px;animation: getShow3 1s ease 1.1s both;}
+/*中间人物动画*/
+#banner .propagandaAD .people2Dot{left: 194px;top: 382px;animation:getShow3 0.5s ease;}
+#banner .propagandaAD .people2Line1{left: 202px;top: 385px;width: 200px;height: 2px;}
+#banner .propagandaAD .people2Line1:after{content: '';animation: getLeftWidth 0.5s linear;background: #fff;width: 200px;height: 2px;position: absolute;left: 0;}
+#banner .propagandaAD .peopleList2{background: url(../images/people2.png);width: 62px;height: 62px;position: absolute;left: 401px;top: 353px;animation: getShow3 1s linear 0.5s both;}
+#banner .propagandaAD .hdtgsssl{width: 270px;height: 30px;background: url(../images/hdtgsssl.png) no-repeat;position: absolute;left: 478px;top: 368px;animation: getShow3 1s ease 0.5s both;}
+/*最右边人物动画*/
+#banner .propagandaAD .people3Dot{left: 430px;top: 290px;animation:getShow3 0.5s ease;}
+#banner .propagandaAD .people3Line1{left: 438px;top: 293px;width: 150px;height: 2px;}
+#banner .propagandaAD .people3Line1:after{content: '';animation: getLeftWidth 0.5s linear;background: #fff;width: 150px;height: 2px;position: absolute;left: 0;}
+#banner .propagandaAD .people3Line2{left: 588px;top: 260px;width: 2px;height: 35px;}
+#banner .propagandaAD .people3Line2:after{content:'';animation: getTopHeight 1s linear;background: #fff;width: 2px;height: 35px;position: absolute;bottom: 0;}
+#banner .propagandaAD .peopleList3{background: url(../images/people3.png);width: 62px;height: 62px;position: absolute;left: 557px;top: 198px;animation: getShow3 1s linear 0.5s;animation-fill-mode: both;}
+#banner .propagandaAD .khxsqshq{width: 270px;height: 30px;background: url(../images/khxsqshq.png) no-repeat;position: absolute;left: 645px;top: 212px;animation: getShow3 1s ease 0.9s both;}
+/*我们擅长*/
+#goodAtMain{height:750px;background: url(../images/goodAtBg.jpg) no-repeat center top;background-size: 100% 100%;position: relative;overflow: hidden;}
+#goodAtMain .goodAtTitle{width:1200px;height: 197px;margin:0 auto;background: url(../images/weGoodAt.png) no-repeat;position: relative;}
+#goodAtMain .goodAtTitle a{position: absolute;left:290px;top:110px;display: block;width: 110px;font-size:21px;height: 36px;line-height:36px;text-align:center;background: #fff;border-radius: 16px;color: #f14a65;}
+#goodAtMain .goodContent{width:1200px;height: 553px;margin:83px auto 0;}
+#goodAtMain .goodContent li{width: 282px;/*height: 180px;*/float: left;/*background: #443e3f;*/}
+#goodAtMain .goodContent li.setMargin{margin:0px 175px;}
+#goodAtMain .goodContent li a{display:block;margin:0 auto;width: 180px;}
+#goodAtMain .goodContent li div{background: #3d3d3d;width: 262px;height: 160px;margin-top: 211px;color: #838181;padding:10px;line-height: 30px;font-size: 18px;transition: all 0.3s ease-in-out;opacity: 0;}
+#goodAtMain .goodContent li:hover div{transform: translateY(-160px);opacity: 1;}
+#goodAtMain .goodContent li img{transition: transform 0.3s ease-in-out;}
+#goodAtMain .goodContent li:hover img{transform: translateY(-50px);}
+#goodAtMain .goodContent li:nth-child(1) a img.addEffect{animation: getLeft3 1s ease;}
+#goodAtMain .goodContent li:nth-child(2) a img.addEffect{animation: getUp3 1s ease;}
+#goodAtMain .goodContent li:nth-child(3) a img.addEffect{animation: getRight3 1s ease;}
+/*我们的优势*/
+#advantageMain{height: 1050px;}
+#advantageMain .advantageBox{width: 1200px;margin:0 auto;height: 1050px;position: relative;}
+#advantageMain .advantageTitle{width: 638px;height: 129px;background: url(../images/advantage.png) no-repeat;position: absolute;right: 98px;z-index: 1;}
+#advantageMain .building{position: absolute;right: 500px;}
+#advantageMain .sloganList{width: 197px;height: 197px;transition: all 0.1s ease;}
+#advantageMain .sloganList:hover{transform: scale(1.1);}
+#advantageMain .slogan1{position: absolute;right: 130px;top: 189px;z-index: 1;}
+#advantageMain .slogan2{position: absolute;right: 251px;top: 309px;z-index: 1;}
+#advantageMain .slogan3{position: absolute;right: 10px;top: 309px;z-index: 1;}
+#advantageMain .slogan4{position: absolute;right: 130px;top: 429px;z-index: 1;}
+#advantageMain .shadow{position: absolute;right: 30px;top: 259px;}
+#advantageMain .textBorad{position: absolute;width: 639px;height: 127px;right: 10px;bottom:0px;background: url(../images/textBorad.png) no-repeat;}
+#advantageMain .textBoradBox{position: absolute;right: 15px;bottom: 120px;overflow: hidden;width: 417px;height: 112px;}
+#advantageMain .textBorad p{transition: all 0.1s ease;transform: translateY(112px);font-size:18px;color:#666;float: right;width: 377px;height: 72px;padding:20px;background: #f3f3f3;transition: all 0.5s ease;}
+.currentBorad{transform: translateY(-112px);}
+/*他们有话说*/
+.someThingToSay{height: 878px;background: url(../images/somethingBg.jpg) no-repeat center center;position: relative;}
+.someThingToSay .someThingTitle{height: 142px;width:1200px;margin:0 auto;}
+.someThingToSay .someThingTitle img{margin:40px 0 0 51px;}
+.someThingToSay .someThingTitle a{display: block;background: white;border-radius: 16px;color: #f14a65;width: 110px;text-align: center;height: 36px;line-height: 36px;font-size: 18px;float: right;margin:55px 98px 0 0;}
+.someThingToSay .somethingContent{width: 1004px;height: 500px;margin:0 auto;position: relative;}
+.someThingToSay .somethingContent .somethingImg{position: absolute;transition: all 0.1s ease;}
+.someThingToSay .somethingContent .somethingImg:hover{transform: scale(1.05);}
+.someThingToSay .somethingContent img:nth-child(1).addEffect{animation: getLeft2 1s ease;}
+.someThingToSay .somethingContent img:nth-child(2).addEffect{left: 168px;animation: getTop2 1s ease;}
+.someThingToSay .somethingContent img:nth-child(3).addEffect{left: 336px;animation: getTop2 1s ease;}
+.someThingToSay .somethingContent img:nth-child(4).addEffect{left: 673px;animation: getTop2 1s ease;}
+.someThingToSay .somethingContent img:nth-child(5).addEffect{top: 168px;animation: getBottom2 1s ease;}
+.someThingToSay .somethingContent img:nth-child(6).addEffect{top: 336px;left:336px;}
+.someThingToSay .somethingContent img:nth-child(7).addEffect{top: 336px;left:504px;animation:getBottom2 1s ease;}
+.someThingToSay .somethingContent img:nth-child(8).addEffect{top: 168px;left:672px;animation:getRight2 0.5s ease;}
+.someThingToSay .somethingContent img:nth-child(9).addEffect{top: 168px;left:840px;animation: getBottom2 1s ease;}
+.someThingToSay .saySomething{overflow:hidden;/*width: 1117px;*/transition: width 0.3s ease;width:0px;height: 113px;background: #3d3d3d;position: absolute;bottom:71px;left: 82px;}
+.someThingToSay .saySomething .mask{width: 0px;height: 0px;border-left: 98px solid #f4758a;border-bottom: 57px solid #f4758a;border-top: 57px solid transparent;border-right: 98px solid transparent;position: absolute;}
+.someThingToSay .saySomething p{width: 930px;float: right;line-height: 1.8;color: white;/*font-size: 18px;*/}
+/*陪伴一起成长*/
+.growTogether{height: 435px;position: relative;}
+.growTogether .togetherTitle{position: absolute;width:735px;height: 185px;top:-185px;left:-25px;background: url(../images/togetherBg.png) no-repeat -210px 0;}
+.growTogether .togetherContent{width:1003px;height: 330px;margin:185px auto 0;overflow: hidden;}
+.growTogether .togetherContent ul{width: 1607px;transition: all 0.7s ease;}
+.growTogether .togetherContent li{float: left;}
+.growTogether .togetherContent li img.addEffect{width: 200px;height: 111px;animation: getShow3 1s ease forwards;opacity: 0;}
+.growTogether .togetherContent li.border1{border-right:1px solid #d4d4d4;border-bottom:1px solid #d4d4d4; }
+.growTogether .togetherContent li.border2{border-bottom:1px solid #d4d4d4; }
+.growTogether .togetherContent li.border3{border-right:1px solid #d4d4d4; }
+.growTogether .leftArrow,.growTogether .rightArrow{position: absolute;top: 100px;font-size: 70px;width: 60px;height: 140px;line-height: 140px;color: rgba(0,0,0,.1);}
+.growTogether .leftArrow{left:35px;display: none;}
+.growTogether .rightArrow{right:35px;}
+/*商户注册*/
+.register{padding-top:40px;height: 281px;background: url(../images/registerBg.jpg) no-repeat;background-size: 100% 100%;}
+.register p{width: 440px;height: 70px;margin:0 auto;font-size:24px;color:white;text-align: center;line-height: 70px;}
+.register p span{position:relative;top:-17px;color: #f73856;font-size: 72px;font-weight: 800;font-family: 'Arial';}
+.register p .leftText{float: left;}
+.register p .rightText{float: right;}
+.register form{height: 50px;width: 520px;margin:66px auto 0;}
+.register form input[type=text]{width: 306px;height: 50px;border:none;outline: none;font-size: 24px;color: #999;padding:0 11px;}
+.register form input[type=button]{vertical-align: top;width: 170px;height: 50px;border:none;outline: none;background: #f73856;font-size: 24px;color: white;display: block;float: right;}
